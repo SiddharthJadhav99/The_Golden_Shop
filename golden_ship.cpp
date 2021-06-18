@@ -1,26 +1,28 @@
 #include <iostream>
+#include <string.h>
 using namespace std;
 
 class Queue{
     public:
     int front, rear, size;
-    int *queue;
-    Queue(int n){
+    string *queue;
+    Queue (int n){
         front = rear = 0;
-        queue = new int;
+        queue = new string;
         size = n;
     }
-    int enque(int num){
+    void enque(string data){
         if(rear == size){
             cout<<"The Queue is Full"<<endl;
             return;
         }
         else{
-            queue[rear] = num;
+            queue[rear] = data;
             rear++;
         }
+        return;
     }
-    int deque(){
+    void deque(){
         if(front == rear){
             cout<<"The Queue is Empty"<<endl;
             return;
@@ -28,9 +30,10 @@ class Queue{
         else{
             for (int i = 0; i < rear-1; i++){
                 queue[i] = queue[i+1];
-                front++;
             }
+            rear--;
         }
+        return;
     }
     void display(){
         if (front == rear){
@@ -42,5 +45,15 @@ class Queue{
     }
 };
 int main(){
-
+    int l;
+    string name;
+    cout<<"Enter the length"<<endl;
+    cin>>l;
+    Queue a(l);
+    for (int i = 0; i < l; i++){
+        cout<<"Enter the name is person in Queue at Position "<<i<<endl;
+        cin>>name;
+        a.enque(name);
+    }
+    a.display();
 }
