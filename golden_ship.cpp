@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-class queue{
+class Queue{
     public:
     int front, rear, size;
     int *queue;
-    void queue(int n){
+    Queue(int n){
         front = rear = 0;
         queue = new int;
         size = n;
