@@ -50,13 +50,10 @@ int main(){
     cout<<"Enter the length"<<endl;
     cin>>l;
     Queue a(l);
-    string s1 = "sid";
-    string s2 = "sanket";
-    string s3 = "sachin";
-    string s4 = "komal";
-    a.enque(s1);
-    a.enque(s2);
-    a.enque(s3);
-    a.enque(s4);
+    for (int i = 0; i < l; i++){
+        cout<<"Enter the name is person in Queue at Position "<<i<<endl;
+        cin>>name;
+        a.enque(name);
+    }
     a.display();
 }
