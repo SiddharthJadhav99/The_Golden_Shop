@@ -86,7 +86,7 @@ int main(){
         a.display();
     }
     else if(option == 2){
-        cout<<"enter friend's name :";
+        cout<<"enter friend name :";
         cin>>frname;
         cout<<"friend in Queue : ";
         cin>>quename;
