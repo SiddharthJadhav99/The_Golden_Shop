@@ -88,6 +88,10 @@ int main(){
         break;
     case 2:
         cout<<"enter friend's name :";
+
+    }
+    else if(option == 2){
+        cout<<"enter friend name :";
         cin>>frname;
         cout<<"friend in Queue : ";
         cin>>quename;
