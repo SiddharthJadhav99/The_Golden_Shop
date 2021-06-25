@@ -81,27 +81,27 @@ int main(){
     while(1){
     cout<<"\nEnter the operation - 1.Serve/ 2.Friend <friend> <name>/ 3. VIP <name>/ 4. exit"<<endl;
     cin>>option;
-    if(option == 1){
+    switch(option){
+        case 1: 
         a.deque();
         a.display();
-    }
-    else if(option == 2){
+        break;
+    case 2:
         cout<<"enter friend's name :";
         cin>>frname;
         cout<<"friend in Queue : ";
         cin>>quename;
         a.friendenque(frname, quename);
         a.display();
-    }
-    else if (option == 3){
+        break;
+    case 3: 
         cout<<"Enter VIP's name : ";
         cin>>vip;
         a.vipenque(vip);
         a.display();
-    }
-    else{
+        break;
+    default : 
         return 0;
-    }
 }
 return 0;
 }
